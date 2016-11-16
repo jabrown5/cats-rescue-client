@@ -34,23 +34,23 @@
   </ul>
 </section>
 
-<section ng-controller="DogsCtrl">
-  <form ng-submit="addDog(name, note)">
-    <input type="text" ng-model="name">
-    <input type="text" ng-model="note">
-    <input type="Submit" value="Add Dog!">
-  </form>
-  <hr>
-  <h3>Dogs for Adoption</h3>
-  <ul>
-    <li ng-repeat="dog in dogs">
-      {{dog.name}} - <em>{{dog.note}}</em>
-      <!--<input type='hidden' value="{{cat.id}}" ng-model="id">-->
-      <button data-id="{{dog.id}}"
-              ng-click="adoptDog(this)">Adopt Me!</button>
-    </li>
-  </ul>
-</section>
+<!--<section ng-controller="DogsCtrl">-->
+  <!--<form ng-submit="addDog(name, note)">-->
+    <!--<input type="text" ng-model="name">-->
+    <!--<input type="text" ng-model="note">-->
+    <!--<input type="Submit" value="Add Dog!">-->
+  <!--</form>-->
+  <!--<hr>-->
+  <!--<h3>Dogs for Adoption</h3>-->
+  <!--<ul>-->
+    <!--<li ng-repeat="dog in dogs">-->
+      <!--{{dog.name}} - <em>{{dog.note}}</em>-->
+      <!--&lt;!&ndash;<input type='hidden' value="{{cat.id}}" ng-model="id">&ndash;&gt;-->
+      <!--<button data-id="{{dog.id}}"-->
+              <!--ng-click="adoptDog(this)">Adopt Me!</button>-->
+    <!--</li>-->
+  <!--</ul>-->
+<!--</section>-->
 
 <!--<section ng-controller="PlaygroundCtrl">-->
   <!--The best movie of all time is {{movie.Title}}!-->

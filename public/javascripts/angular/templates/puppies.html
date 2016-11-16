@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <div ng-controller="puppyCtrl">
+        <input type="checkbox" ng-model="puppy.edited">
+        <label>{{puppy.name}}</label>
+        <input type="text" ng-model="puppy.name"></input>
+        <button ng-click="whoAmI()"></button>
+
+        <div ng-repeat="puppy in puppies">
+            <h1>{{puppy.img}}</h1>
+            <p>{{puppy.note}}</p>
+            <p>{{puppy.name}}</p>
+        </div>
+
+
+        <!--make a button that calls an api-->
+        <button ng-click="getPuppies()">get Puppies</button>
+
+    </div>
+
+</body>
+</html>

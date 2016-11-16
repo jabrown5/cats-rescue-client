@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="BlogApp">
+<head>
+    <title>Pet Adoption</title>
+    <!--<script src="/javascripts/jquery.min.js"></script>-->
+    <script src="/javascripts/angular.min.js"></script>
+    <script src="/javascripts/angular-route.min.js"></script>
+    <script src="/javascripts/blogApp.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<section>
+    <article>
+        <h3>Blog Posts</h3>
+        <p>Please feel free to add your notes.</p>
+    </article>
+
+    <article ng-controller="AddBlogEntryCtrl">
+        <form ng-submit="create(title, contents, tags)">
+            <input type="text" ng-model="title" placeholder="What's it all about?">
+            <input type="text" ng-model="contents" placeholder="Tell us more!">
+            <input type="text" ng-model="tags" placeholder="topics">
+            <input type="submit" value="Add your post!">
+        </form>
+    </article>
+
+    <article ng-controller="BlogEntryListCtrl">
+        <ul>
+            <li ng-repeat="blog in blogs">
+                <h5>{{blog.title}}</h5>
+                <p>{{blog.contents}}</p>
+                <p>{{blog.tags}} </p>
+            </li>
+        </ul>
+    </article>
+
+
+
+
+    <!--<article ng-controller="BlogApp">-->
+        <!--<form ng-submit="addBlog(title, contents, tags)">-->
+            <!--<input type="text" ng-model="title" placeholder="What's it all about?">-->
+            <!--<input type="text" ng-model="contents" placeholder="Tell us more!">-->
+            <!--<input type="text" ng-model="tags" placeholder="topics">-->
+            <!--<input type="submit" value="Add your post!">-->
+        <!--</form>-->
+
+        <!--<hr>-->
+        <!--<ul>-->
+            <!--<li ng-repeat="blog in blogs">-->
+                <!--<h4>{{blog.title}}</h4>-->
+                <!--<p>{{blog.contents}}</p>-->
+                <!--<p>{{blog.tags}}</p>-->
+                <!--&lt;!&ndash;<input type='hidden' value="{{cat.id}}" ng-model="id">&ndash;&gt;-->
+                <!--<button data-id="{{blog.id}}"-->
+                        <!--ng-click="deleteBlog(this)">Delete this post.</button>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</article>-->
+
+</section>
+</body>
